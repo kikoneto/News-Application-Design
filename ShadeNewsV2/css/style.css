@@ -1,0 +1,668 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+:root {
+    --text-color: #40434e;
+    --main-bg-color: #e8ebe4;
+    --skin-color: #ca2e55;
+    --skin-color-optional: #28afb0;
+    --skin-color-optional-second: #b7a196;
+    --skin-color-optional-third: #ff8c42;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Varela Round', Poppins;
+    overflow-x: hidden;
+    background-color: #3334390d;
+}
+
+section {
+    padding-top: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(64, 67, 78, 0.5);
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--skin-color);
+    border-radius: 7px;
+}
+
+.padd-200 {
+    padding-left: 150px;
+    padding-right: 50px;
+}
+
+/* Navbar */
+
+.container {
+    width: 100vw;
+    height: 50px;
+    margin-inline: auto;
+    display: inline-block;
+    background-color: white;
+    box-shadow: 0 0 3px #716c6c;
+}
+
+.container h1 {
+    float: left;
+    position: relative;
+    padding-top: 7px;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.container h1::after {
+    display: inline-block;
+    content: "";
+    border-top: 0.1rem solid var(--skin-color);
+    width: 20rem;
+    transform: translateX(-139px);
+    margin: -10px;
+}
+
+.container h1 span {
+    color: var(--skin-color);
+}
+
+.container nav {
+    padding-top: 9px;
+    padding-right: 20px;
+    float: right;
+}
+
+.container nav::after {
+    display: inline-block;
+    content: "";
+    border-top: 0.1rem solid var(--skin-color);
+    width: 35rem;
+    transform: translateX(-46px);
+    margin: 9px;
+}
+
+.navbar li {
+    padding-inline: 30px;
+    display: inline;
+}
+
+.navbar a {
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: var(--skin-color);
+}
+
+/* Home */
+
+.home-section {
+    display: block;
+}
+
+.home-section.active {
+    display: none;
+}
+
+.home {
+    position: relative;
+}
+
+.home-intro h3 {
+    font-weight: 500;
+}
+
+.home .content {
+    width: 67%;
+    position: relative;
+}
+
+.home .content img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.home .content .news-card {
+    bottom: 0;
+    padding: 1rem;
+    width: 100%;
+    background-color: hsla(0, 0%, 0%, 0.7);
+    position: absolute;
+}
+
+.home .content .news-card h1 {
+    color: var(--skin-color);
+}
+
+.home .news-info {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    padding-left: 2rem;
+    width: 33%;
+    height: 90%;
+    overflow-y: scroll;
+}
+
+.home .news-info p {
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+/* Login */
+
+.login-section {
+    transition: all ease 0.5s;
+}
+
+.dark {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    transition: all ease 0.5s;
+}
+
+.login-section .login-panel {
+    border-radius: 16px;
+    box-shadow: 0px 2px 14px var(--main-bg-color);
+    position: absolute;
+    z-index: 101;
+    width: 35%;
+    height: 80%;
+    top: 10%;
+    left: 33%;
+    background-color: var(--main-bg-color);
+    transform: translateY(-1500px);
+    transition: all ease 0.5s;
+}
+
+.login-section .login-panel.active {
+    transform: translateY(10px);
+}
+
+.login-panel i {
+    font-size: 2rem;
+    margin-left: 38px;
+    margin-top: 27px;
+}
+
+.login-panel i:hover {
+    color: var(--skin-color);
+    cursor: pointer;
+}
+
+.login-panel h1 {
+    font-size: 2rem;
+    padding-left: 85px;
+    padding-top: 25px;
+}
+
+.login-panel .login-form input {
+    display: inline-block;
+    height: 8vh;
+    width: 23vw;
+    margin-top: 30px;
+    margin-left: 85px;
+    outline: 0;
+    font-size: 1rem;
+    border: 1px solid var(--skin-color);
+    border-radius: 4px 0 0 4px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: var(--skin-color);
+    text-align: center;
+}
+
+.login-panel .login-form input:focus {
+    border: 2px solid var(--skin-color);
+}
+
+.login-panel .login-form input[type="submit"] {
+    background-color: var(--skin-color);
+    color: var(--main-bg-color);
+    font-weight: 500;
+    font-size: 1.5rem;
+    transition: all ease 0.5s;
+}
+
+.login-panel .login-form input[type="submit"]:hover {
+    background-color: #ffffff;
+    color: var(--skin-color);
+    cursor: pointer;
+    font-size: 2rem;
+    transition: all ease 0.5s;
+}
+
+.login-panel .login-form input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.login-panel .login-additional {
+    display: inline-block;
+    position: relative;
+    margin-left: 85px;
+    width: 23vw;
+    height: 6vh;
+}
+
+.login-panel .login-additional .remember-container {
+    float: left;
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+
+.login-panel .login-additional .remember-container .remember {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border: 1px solid var(--skin-color);
+    border-radius: 3px;
+    bottom: 3px;
+    transition: all 0.5s ease;
+}
+
+.login-panel .login-additional .remember-container .remember:hover {
+    cursor: pointer;
+}
+
+.login-panel .login-additional .remember-container .remember.active {
+    background-color: var(--skin-color);
+    border: 2px solid var(--main-bg-color);
+    transition: all 0.5s ease;
+}
+
+.login-panel .login-additional .remember-container p {
+    position: absolute;
+    bottom: 2px;
+    margin-left: 20px;
+    margin-bottom: -2px;
+    font-size: 0.8rem;
+}
+
+.login-panel .login-additional .help-container {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    margin-left: 178px;
+}
+
+.login-panel .login-additional .help-container a {
+    transition: all ease 0.5s;
+    position: absolute;
+    text-decoration: none;
+    color: var(--skin-color);
+    right: 0;
+    bottom: 0;
+}
+
+.login-panel .login-additional .help-container a:hover {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    transition: all ease 0.5s;
+}
+
+.login-panel .login-additional .sign-later {
+    height: 8vh;
+    position: relative;
+}
+
+.login-panel .login-additional .sign-later p {
+    position: absolute;
+    color: var(--text-color);
+    bottom: 20px;
+}
+
+.login-panel .login-additional .sign-later span {
+    color: var(--skin-color);
+}
+
+.login-panel .login-additional .sign-later a {
+    position: absolute;
+    bottom: 0;
+    text-decoration: none;
+    color: var(--skin-color);
+    transition: all ease 0.5s;
+}
+
+.login-panel .login-additional .sign-later a:hover {
+    color: var(--text-color);
+    transition: all ease 0.5s;
+}
+
+/* Register */
+
+.register-section .register-panel {
+    border-radius: 16px;
+    box-shadow: 0px 2px 14px var(--main-bg-color);
+    position: absolute;
+    z-index: 101;
+    width: 35%;
+    height: 95%;
+    top: 1%;
+    left: 33%;
+    background-color: var(--main-bg-color);
+    transform: translateY(-1500px);
+    transition: all ease 0.5s;
+}
+
+.register-section .register-panel.active {
+    transform: translateY(10px);
+}
+
+.register-panel i {
+    font-size: 2rem;
+    margin-left: 38px;
+    margin-top: 27px;
+}
+
+.register-panel i:hover {
+    color: var(--skin-color);
+    cursor: pointer;
+}
+
+.register-panel h1 {
+    font-size: 2rem;
+    padding-left: 85px;
+    padding-top: 25px;
+}
+
+.register-panel .register-form input {
+    display: inline-block;
+    height: 8vh;
+    width: 23vw;
+    margin-top: 30px;
+    margin-left: 85px;
+    outline: 0;
+    font-size: 1rem;
+    border: 1px solid var(--skin-color);
+    border-radius: 4px 0 0 4px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: var(--skin-color);
+    text-align: center;
+}
+
+.register-panel .register-form input:focus {
+    border: 2px solid var(--skin-color);
+}
+
+.register-panel .register-form input[type="submit"] {
+    background-color: var(--skin-color);
+    color: var(--main-bg-color);
+    font-weight: 500;
+    font-size: 1.5rem;
+    transition: all ease 0.5s;
+}
+
+.register-panel .register-form input[type="submit"]:hover {
+    background-color: #ffffff;
+    color: var(--skin-color);
+    cursor: pointer;
+    font-size: 2rem;
+    transition: all ease 0.5s;
+}
+
+.register-panel .register-form input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.register-panel .register-additional {
+    display: inline-block;
+    position: relative;
+    margin-left: 85px;
+    width: 23vw;
+    height: 6vh;
+}
+
+.register-panel .register-additional .remember-container {
+    float: left;
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+
+.register-panel .register-additional .help-container {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    margin-left: 178px;
+}
+
+.register-panel .register-additional .help-container a {
+    transition: all ease 0.5s;
+    position: absolute;
+    text-decoration: none;
+    color: var(--skin-color);
+    right: 0px;
+    bottom: 3px;
+}
+
+.register-panel .register-additional .help-container a:hover {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    transition: all ease 0.5s;
+}
+
+.register-panel .register-additional .sign-now {
+    height: 8vh;
+    width: 70%;
+    position: relative;
+    float: left;
+}
+
+.register-panel .register-additional .sign-now p {
+    position: absolute;
+    color: var(--text-color);
+    bottom: 60px;
+}
+
+.register-panel .register-additional .sign-now span {
+    color: var(--skin-color);
+}
+
+.register-panel .register-additional .sign-now a {
+    position: absolute;
+    bottom: 35px;
+    text-decoration: none;
+    color: var(--skin-color);
+    transition: all ease 0.5s;
+}
+
+.register-panel .register-additional .sign-now a:hover {
+    color: var(--text-color);
+    transition: all ease 0.5s;
+}
+
+/* Logout */
+
+.logout .logout-panel {
+    border-radius: 16px;
+    box-shadow: 0px 2px 14px var(--main-bg-color);
+    position: absolute;
+    z-index: 101;
+    width: 35%;
+    height: 35%;
+    top: 30%;
+    left: 33%;
+    background-color: var(--main-bg-color);
+    transform: translateX(-1400px);
+    transition: all ease 0.5s;
+}
+
+.logout .logout-panel.active {
+    transform: translateX(10px);
+    transition: all ease 0.5s;
+}
+
+.logout .logout-panel h2 {
+    position: absolute;
+    top: 20%;
+    margin-left: 50px;
+    color: var(--text-color);
+}
+
+.logout .logout-panel h3 {
+    position: absolute;
+    top: 40%;
+    margin-left: 80px;
+    color: var(--text-color);
+}
+
+.logout .logout-panel .button-container {
+    position: absolute;
+    top: 60%;
+    right: 5%;
+}
+
+.logout .logout-panel button {
+    height: 6vh;
+    width: 8vw;
+    margin-top: 26px;
+    margin-left: 13px;
+    font-size: 1rem;
+    border: 1px solid var(--text-color);
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: var(--main-bg-color);
+    background-color: var(--text-color);
+    text-align: center;
+    box-shadow: 0px 2px 14px var(--text-color);
+    transition: all ease 0.5s;
+}
+
+.logout .logout-panel button:hover {
+    color: var(--skin-color);
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+/* Latest News */
+
+.latest-news-section {
+    display: none;
+}
+
+.latest-news-section.active {
+    display: block;
+}
+
+.latest-news {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.news-navbar {
+    position: relative;
+    width: 91%;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #a29d9d;
+}
+
+.news-navbar ul {
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.news-navbar li {
+    padding-inline: 35px;
+    margin: 6px;
+    display: inline;
+    border-left: 2px solid var(--skin-color);
+    border-right: 2px solid var(--skin-color);
+
+}
+
+.news-navbar a {
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.news-navbar a:hover {
+    transition: all 0.5s ease;
+    color: var(--skin-color);
+    font-size: 1.1rem;
+}
+
+.news-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 32px;
+    width: 91%;
+    min-height: 600px;
+}
+
+.new-box {
+    margin-top: 4px;
+    width: 375px;
+    height: 260px;
+    border-radius: 2px;
+    background-color: white;
+    box-shadow: 0 0 4px rgba(77, 76, 76, 0.682);
+    text-align: center;
+    transition: 0.5s all ease;
+}
+
+.new-box img {
+    width: 313px;
+    height: 160px;
+}
+
+.new-box:hover {
+    width: 390px;
+    height: 270px;
+    border-radius: 15px;
+    background-color: #393737;
+    color: white;
+    box-shadow: 0 0 20px rgb(77 76 76 / 68%);
+    transition: 0.5s all ease;
+    cursor: pointer;
+}
+
+
+/* Footer */
+
+footer {
+    position: absolute;
+    margin: 50px auto 0;
+}
+
+footer p {
+    font-size: 0.8rem;
+    color: var(--skin-color);
+}
